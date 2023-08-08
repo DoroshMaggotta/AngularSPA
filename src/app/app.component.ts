@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {GetCardService} from "./service/get-card.service";
+import {CardInterface} from "./interface/cardInterface";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-test';
+  public cardArr: Array<CardInterface> = [];
+  constructor(private getCardService: GetCardService) {
+  }
+
+  getCard() {
+    this.getCardService.getInfo().subscribe((data: any) => {this.cardArr = data.results})
+}
 }

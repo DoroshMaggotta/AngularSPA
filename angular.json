@@ -93,12 +93,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/custom-fonts.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "b5657fb0-2b9b-414d-b0e3-6fcd10498183"
   }
 }
