@@ -1,18 +1,23 @@
+<div class="wrapper">
+  <div class="header">
+    <h2>Filter by keywords</h2>
+    <div class="header-search">
+      <img src="./assets/img/Search-vector.svg" alt="">
+      <input class="search-input" type="text" placeholder="Search">
+    </div>
+  </div>
 
-<div class="header">
-  <h2>Filter by keywords</h2>
-  <div class="heder-search">
-    <img src="" alt="">\
-    <input class="search-input" type="text" placeholder="Search">
+  <div class="result-search">
+    <h2>Results:6</h2>
+    <hr style="border: 1px solid #EAEAEA"/>
+  </div>
+  <div class="card-list">
+    <app-card
+      *ngFor="let item of cardArr"
+      (click)="getCard()"
+      [imgUrl]="item['image_url']"
+      [title]="item.title"
+    ></app-card>
   </div>
 </div>
-
-<div class="result-search" style="margin: 40px">
-  <h2>Results:6</h2>
-  <hr style="border: 1px solid #EAEAEA"/>
-</div>
-      <div class="card-list"  >
-       <app-card *ngFor ="let i of [1, 2, 3, 4,5,6]" (click)="getCard()"></app-card>
-      </div>
-
 
